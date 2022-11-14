@@ -44,6 +44,7 @@ public class AdminController {
     }
 
     @PostMapping(value = "/update/{id}")
+//    @PostMapping(value = "/update/{id}")
     public String update(@ModelAttribute("user") User user,
                          ModelMap model,
                          @RequestParam(value = "listRoles", required = false) String[] roles) {
@@ -55,6 +56,7 @@ public class AdminController {
     }
 
     @PostMapping("/delete/{id}")
+//    @PostMapping("/delete/{id}")
     public String deleteUser(@PathVariable("id") long id) {
         userService.deleteUser(id);
         return "redirect:/admin";
